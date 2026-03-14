@@ -41,3 +41,12 @@ public:
         }
     }
 };
+int main() {
+    Robot robot(7, 3, NORTH);
+    robot.execute("RAALAL");
+
+    cout << "Posicion final: (" << robot.getX() << ", " << robot.getY() << ")" << endl; // (9, 4)
+    cout << "Direccion: " << robot.directionName() << endl; // WEST
+
+    return 0;
+}
