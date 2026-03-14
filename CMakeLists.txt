@@ -9,3 +9,8 @@ add_executable(twitter      twitter/design_twitter.cpp)
 add_executable(spreadsheet  spreadsheet/design_spreadsheet.cpp)
 add_executable(robot        robot/robot-simulator.cpp)
 add_executable(queen        queen/queen-attack.cpp)
+
+foreach(target twitter spreadsheet robot queen)
+    target_compile_options(${target} PRIVATE -Wall -Wextra -Wpedantic)
+endforeach()
+
