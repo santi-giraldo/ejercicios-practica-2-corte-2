@@ -58,22 +58,6 @@ public:
     }
 };
 int main() {
-    Spreadsheet sp(3);
-
-    cout << "=5+7  -> " << sp.getValue("=5+7") << endl;   // 12
-
-    sp.setCell("A1", 10);
-    cout << "=A1+6 -> " << sp.getValue("=A1+6") << endl;  // 16
-
-    sp.setCell("B2", 15);
-    cout << "=A1+B2 -> " << sp.getValue("=A1+B2") << endl; // 25
-
-    sp.resetCell("A1");
-    cout << "=A1+B2 (A1 reset) -> " << sp.getValue("=A1+B2") << endl; // 15
-
-    return 0;
-}
-int main() {
     Twitter tw;
     tw.postTweet(1, 5);
 
