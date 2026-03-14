@@ -20,6 +20,15 @@ public:
     int getX()         const { return x; }
     int getY()         const { return y; }
     Direction facing() const { return dir; }
+    string directionName() const {
+        switch (dir) {
+            case NORTH: return "NORTH";
+            case EAST:  return "EAST";
+            case SOUTH: return "SOUTH";
+            case WEST:  return "WEST";
+        }
+        return "";
+}
 
     void turnRight() {
         dir = static_cast<Direction>((dir + 1) % 4);
