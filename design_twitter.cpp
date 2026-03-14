@@ -73,6 +73,31 @@ int main() {
 
     return 0;
 }
+int main() {
+    Twitter tw;
+    tw.postTweet(1, 5);
+
+    auto feed = tw.getNewsFeed(1);
+    cout << "Feed user 1: ";
+    for (int id : feed) cout << id << " ";
+    cout << endl; // [5]
+
+    tw.follow(1, 2);
+    tw.postTweet(2, 6);
+
+    feed = tw.getNewsFeed(1);
+    cout << "Feed user 1 (follows 2): ";
+    for (int id : feed) cout << id << " ";
+    cout << endl; // [6, 5]
+
+    tw.unfollow(1, 2);
+    feed = tw.getNewsFeed(1);
+    cout << "Feed user 1 (unfollow 2): ";
+    for (int id : feed) cout << id << " ";
+    cout << endl; // [5]
+
+    return 0;
+}
 
 
 /**
